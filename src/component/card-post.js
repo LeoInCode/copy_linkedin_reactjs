@@ -105,7 +105,7 @@ function CardPost() {
     <Grid item lg={12} md={12} className={classes.gridCardTop}>
       <Card className={classes.card}>
         <CardHeader className={classes.cardHeader}
-          avatar={<Avatar src="" alt="" className={classes.avatar}/>}
+          avatar={<Avatar src="/foto.jpg" alt="Foto" className={classes.avatar}/>}
           title={<Typography variant="caption">Leonardo Mendes</Typography>}
           action={
             <IconButton aria-label="settings" className={classes.iconMore}>
@@ -126,10 +126,10 @@ function CardPost() {
         />
         <CardContent className={classes.content}>
           <Typography className={classes.message} variant="body1">
-            Ano
-                  </Typography>
+            Mais uma conquista!
+          </Typography>
           <CardActionArea>
-            <img src="/capa.png" className={classes.image} alt="img" />
+            <img src="/post.png" className={classes.image} alt="img" />
           </CardActionArea>
         </CardContent>
         <Divider className={classes.divider} />
