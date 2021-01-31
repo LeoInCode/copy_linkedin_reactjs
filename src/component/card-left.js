@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   gridCardBottom: {
     paddingTop: theme.spacing(1)
   },
-  boxMedia: {
+  linkMedia: {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
@@ -142,20 +142,21 @@ const useStyles = makeStyles((theme) => ({
 function CardLeft() {
 
   const classes = useStyles();
+  const url = 'https://www.linkedin.com/in/leonardo-mendes-s553/'
 
   return(
     <>
       <Grid item lg={12} md={12}>
         <Card className={classes.card}>
           <CardActionArea>
-            <Box className={classes.boxMedia}>
+            <Link href={url} className={classes.linkMedia}>
               <CardMedia
                 className={classes.media}
                 image="/capa.png"
                 title="Capa"
               />
               <Avatar alt="Foto" src="/foto.jpg" className={classes.circleAvatar} />
-            </Box>
+            </Link>
           </CardActionArea>
           <CardContent>
             <Box className={classes.boxContent}>

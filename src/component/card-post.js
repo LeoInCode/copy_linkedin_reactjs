@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, makeStyles, Grid, Card, CardActionArea, Typography, CardContent, CardHeader, Avatar, IconButton, List, ListItem, Divider } from '@material-ui/core';
+import { makeStyles, Grid, Card, CardActionArea, Typography, CardContent, CardHeader, Avatar, IconButton, List, ListItem, Divider, Link } from '@material-ui/core';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import PublicIcon from '@material-ui/icons/Public';
 import ThumbUpOutlinedIcon from '@material-ui/icons/ThumbUpOutlined';
@@ -17,26 +17,37 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: 'none',
     border: `1px solid ${theme.palette.type === 'dark' ? '#fff5' : '#0002'}`,
   },
+  linkCard: {
+    cursor: 'pointer'
+  },
   cardHeader: {
     paddingTop: theme.spacing(1),
   },
   avatar: {
     width: theme.spacing(6),
-    height: theme.spacing(6)
+    height: theme.spacing(6),
+    cursor: 'pointer'
   },
   iconMore: {
     paddingTop: theme.spacing(1)
   },
+  title: {
+    color: theme.palette.type === 'dark' ? '#fff' : '#000',
+    fontWeight: 'bold',
+  },
   subheader: {
     display: 'flex',
     flexDirection: 'column',
+    cursor: 'pointer'
   },
   caption: {
+    color: theme.palette.type === 'dark' ? '#fff5' : '#00000099',
     padding: theme.spacing(0),
     margin: theme.spacing(0),
     lineHeight: '1.33',
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
+    cursor: 'pointer'
   },
   iconPublic: {
     marginLeft: theme.spacing(1),
@@ -103,33 +114,36 @@ const useStyles = makeStyles((theme) => ({
 function CardPost() {
 
   const classes = useStyles();
+  const url = 'https://www.linkedin.com/in/leonardo-mendes-s553/'
 
   return (
     <Grid item lg={12} md={12} className={classes.gridCardTop}>
       <Card className={classes.card}>
-        <CardHeader className={classes.cardHeader}
-          avatar={<Avatar src="/foto.jpg" alt="Foto" className={classes.avatar}/>}
-          title={<Typography variant="caption">Leonardo Mendes</Typography>}
-          action={
-            <IconButton aria-label="settings" className={classes.iconMore}>
-              <MoreHorizIcon />
-            </IconButton>
-          }
-          subheader={
-            <Box className={classes.subheader}>
-              <Typography variant="caption" className={classes.caption}>
-                Front End Developer | Angular | ReactJS | JavaScript | HTML5 | CSS3
-              </Typography>
-              <Typography variant="caption" className={classes.caption}>
-                2 h
-              <PublicIcon className={classes.iconPublic} />
-              </Typography>
-            </Box>
-          }
-        />
+        <Link href={url} className={classes.linkCard}>
+          <CardHeader className={classes.cardHeader}
+            avatar={<Avatar src="/foto.jpg" alt="Foto" className={classes.avatar}/>}
+            title={<Typography variant="caption" className={classes.title}>Leonardo Mendes</Typography>}
+            action={
+              <IconButton aria-label="settings" className={classes.iconMore}>
+                <MoreHorizIcon />
+              </IconButton>
+            }
+            subheader={
+              <Link href={url} className={classes.subheader}>
+                <Typography variant="caption" className={classes.caption}>
+                  Front End Developer | Angular | ReactJS | JavaScript | HTML5 | CSS3
+                </Typography>
+                <Typography variant="caption" className={classes.caption}>
+                  2 h
+                <PublicIcon className={classes.iconPublic} />
+                </Typography>
+              </Link>
+            }
+          />
+        </Link>
         <CardContent className={classes.content}>
           <Typography className={classes.message} variant="body1">
-            Mais uma conquista!
+            Mais um aprendizado!
           </Typography>
           <CardActionArea>
             <img src="/post.png" className={classes.image} alt="img" />
