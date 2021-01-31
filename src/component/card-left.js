@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
     width: 'auto',
     borderRadius: 8,
     boxShadow: 'none',
-    border: '1px solid #0002',
+    border: `1px solid ${theme.palette.type === 'dark' ? '#fff5' : '#0002'}`,
   },
   media: {
     height: 50,
