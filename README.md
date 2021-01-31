@@ -1,4 +1,4 @@
-### Clonando lnterface do Linkedin com ReactJS
+# Clonando lnterface do Linkedin com ReactJS
 
 Para visualizar o resultado, da uma conferida aqui: [Clone Linkedin](https://copy-linkedin-reactjs.vercel.app/ "Clone Linkedin")
 
