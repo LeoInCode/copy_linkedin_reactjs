@@ -86,13 +86,16 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   iconLike: {
+    color: theme.palette.type === 'dark' ? '#fff8' : '#00000099',
     transform: 'rotate(360deg) scaleX(-1)',
     fontSize: 25
   },
   icon: {
+    color: theme.palette.type === 'dark' ? '#fff8' : '#00000099',
     fontSize: 25
   },
   iconSend: {
+    color: theme.palette.type === 'dark' ? '#fff8' : '#00000099',
     transform: 'rotate(315deg)',
     fontSize: 25
   }
